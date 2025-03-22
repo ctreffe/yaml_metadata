@@ -37,8 +37,8 @@ study_name: Unique identifier, e.g. "JAS MA 3"
 # as study name and all additional aliases under the following alias list.
 
 aliases:
-	- First alias
-	- Second alias
+  - First alias
+  - Second alias
 
 # As a basic differentiation between types of studies, provide the type of 
 # study as either 'online' or 'laboratory' (without quotes).
@@ -59,9 +59,9 @@ research_area: Judge Advisor System (JAS)
 # study, the collected data, and the provided materials and files.
 
 description: >
-	Please provide a short content description of the study from which the 
-	dataset originated. Readers should get a basic understanding of the raw 
-	data based on this description.
+  Please provide a short content description of the study from which the 
+  dataset originated. Readers should get a basic understanding of the raw 
+  data based on this description.
 
 # In addition to the description, a list of available resources for the study 
 # should be provided in no particular order. All files in the associated folder 
@@ -69,22 +69,22 @@ description: >
 # apply filters when searching the research repository.
 
 available_resources:
-	- Materials (e.g. experiment code, instruction files)
-	- Data (e.g. raw data, edited data sets)
-	- Codebook
-	- Analysis scripts
-	- Additional files (e.g., videos, audio recordings, scanned surveys)
+  - Materials (e.g. experiment code, instruction files)
+  - Data (e.g. raw data, edited data sets)
+  - Codebook
+  - Analysis scripts
+  - Additional files (e.g., videos, audio recordings, scanned surveys)
 
 # If the data set has already been published, all relevant citations should be
 # provided to allow linking folders in the research repository to specific
 # publications and to provide additional filter options.
 
 publication: >
-	Please provide an unformatted full citation if the data set is part of 
-	an publication. If the data set is part of multiple publications, 
-	provide the citation for the primary publication and provide 
-	additional citations in the notes section. You can, also cite 
-	unpublished manuscripts.
+  Please provide an unformatted full citation if the data set is part of 
+  an publication. If the data set is part of multiple publications, 
+  provide the citation for the primary publication and provide 
+  additional citations in the notes section. You can, also cite 
+  unpublished manuscripts.
 
 # All available online resources (e.g. GitHub repositories for experimental
 # code, OSF repositories containing preregistrations, additional online
@@ -92,9 +92,9 @@ publication: >
 # all available data and materials for each study.
 
 online_resources:
-	- Provide link to first resource (explanation in parentheses, one line only)
-	- Provide link to first resource (explanation in parentheses, one line only)
-	- Provide link to first resource (explanation in parentheses, one line only)
+  - Provide link to first resource (explanation in parentheses, one line only)
+  - Provide link to first resource (explanation in parentheses, one line only)
+  - Provide link to first resource (explanation in parentheses, one line only)
 
 # A substantial number of computer experiments conducted by the Department of 
 # Economic and Social Psychology is created using alfred (a library for rapid 
@@ -118,6 +118,6 @@ mortimer_url: null
 # example additional citations. 
 
 notes: >
-	This section is reserved for miscellaneous information that the responsible 
-	researcher deems relevant, but which does not belong anywhere else in the
-	metadata sheet.
+  This section is reserved for miscellaneous information that the responsible 
+  researcher deems relevant, but which does not belong anywhere else in the
+  metadata sheet.
