@@ -1,0 +1,123 @@
+# Experiment Metadata File
+#
+# This template provides a minimal documentation of an experiment data
+# set. Each data set in our research repository (each subfolder associated 
+# with one specific data set) should contain a metadata file providing 
+# information about the originating study. If necessary, the template can be 
+# extended with additional data fields.
+
+# Researchers should provide the approximate date when the data collection was
+# finished. There are different cues to this, e.g. the creation date of the
+# raw data set, a timestamp for the last experimental session in the data, or
+# the time of creation for the last video or audio recording. The chance to
+# infer the end date of a data collection should be relatively high even with
+# sparse information. This date should also be used at the beginning in the 
+# name of the folder containing the metadata file to allow for matching.
+
+date_of_study: 2022-04-05
+
+# The researcher responsible for the data collection should named. If the 
+# associated repository contains data sets from multiple researchers, a unique 
+# identifier (e.g., the first character of the first name and then the first 
+# six characters of the last name) should be assigned to each researcher. This 
+# identifier should be used follwoing the date in the name of the folder 
+# containing the metadata file to allow for later matching.
+
+responsible_researcher: ctreffe (Christian Treffenstädt)
+
+# The study name should be a short but unique identifier. This variable should 
+# provide a first reference when matching any data to the experiment. This
+# identifier should be used following the identifier for the responsible 
+# researcher in the name of the folder containing the metadata sheet to allow 
+# for later matching.
+
+study_name: Unique identifier, e.g. "JAS MA 3"
+
+# If a study was referenced with multiple aliases, provide the primary alias
+# as study name and all additional aliases under the following alias list.
+
+aliases:
+	- First alias
+	- Second alias
+
+# As a basic differentiation between types of studies, provide the type of 
+# study as either 'online' or 'laboratory' (without quotes).
+
+study_type: online
+
+# To allow for a general classification of studies, provide the general
+# research area for which the data was collected. In addition, provide common
+# abbreviations for the research area where applicable. Examples are:
+# Emergence of Leadership(EOL), Judge Advisor System (JAS), Escalation of
+# Commitment (EOL), Sunk Cost Effect (SC), or Accountability (ACC).
+
+research_area: Judge Advisor System (JAS)
+
+# Each metadata sheet should contain a short description of the underlying
+# study. The description should provide other researchers (those not
+# responsible for the data collection) with a basic understanding of the
+# study, the collected data, and the provided materials and files.
+
+description: >
+	Please provide a short content description of the study from which the 
+	dataset originated. Readers should get a basic understanding of the raw 
+	data based on this description.
+
+# In addition to the description, a list of available resources for the study 
+# should be provided in no particular order. All files in the associated folder 
+# should be present on the available resources list. This will allow users to 
+# apply filters when searching the research repository.
+
+available_resources:
+	- Materials (e.g. experiment code, instruction files)
+	- Data (e.g. raw data, edited data sets)
+	- Codebook
+	- Analysis scripts
+	- Additional files (e.g., videos, audio recordings, scanned surveys)
+
+# If the data set has already been published, all relevant citations should be
+# provided to allow linking folders in the research repository to specific
+# publications and to provide additional filter options.
+
+publication: >
+	Please provide an unformatted full citation if the data set is part of 
+	an publication. If the data set is part of multiple publications, 
+	provide the citation for the primary publication and provide 
+	additional citations in the notes section. You can, also cite 
+	unpublished manuscripts.
+
+# All available online resources (e.g. GitHub repositories for experimental
+# code, OSF repositories containing preregistrations, additional online
+# materials) should be provided in the metadata file to provide a full account of
+# all available data and materials for each study.
+
+online_resources:
+	- Provide link to first resource (explanation in parentheses, one line only)
+	- Provide link to first resource (explanation in parentheses, one line only)
+	- Provide link to first resource (explanation in parentheses, one line only)
+
+# A substantial number of computer experiments conducted by the Department of 
+# Economic and Social Psychology is created using alfred (a library for rapid 
+# experiment development), and the mortimer web interface. The following 
+# section is included to provide additional information on alfred experiments,
+# specifically the experiment ID ("exp_id" from the data set), the alfred 
+# version ("alfred_version" from the data set for alfred3), and the URL of the 
+# mortimer instance on which the experiment was hosted (e.g., 
+# "alfredo3.psych.bio.uni-goettingen.de/mortimer3"). This information will 
+# facilitate participant screening, and rerunning the experiment code with the 
+# appropriate alfred version. If the documented experiment was not created 
+# with alfred, leave the following variables unchanged.
+
+alfred_exp_id: null
+
+alfred_version: null
+
+mortimer_url: null
+
+# Provide additional miscellaneous information in the notes section, for 
+# example additional citations. 
+
+notes: >
+	This section is reserved for miscellaneous information that the responsible 
+	researcher deems relevant, but which does not belong anywhere else in the
+	metadata sheet.
