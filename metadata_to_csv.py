@@ -1,6 +1,7 @@
 import os
 import re
 import yaml
+import argparse
 import csv
 from collections import OrderedDict
 
@@ -251,8 +252,18 @@ def write_dicts_to_csv(dicts, output_path):
 
 
 if __name__ == "__main__":
-    # Use the current working directory as the root folder
-    root_folder = os.getcwd()
+    # Use argparse to allow optional command-line path input
+    parser = argparse.ArgumentParser(description="Load YAML files and export them to CSV.")
+    parser.add_argument(
+        "path",
+        nargs="?",
+        default=os.getcwd(),
+        help="Path to the root folder containing YAML files (default: current working directory)."
+    )
+    args = parser.parse_args()
+
+    # Resolve the absolute path to the target folder
+    root_folder = os.path.abspath(args.path)
 
     # Load all YAML metadata files into a list of dictionaries
     all_metadata = load_yaml_files_recursively(root_folder)

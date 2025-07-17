@@ -1,6 +1,7 @@
 import os
 import re
 import yaml
+import argparse
 import json
 import datetime
 from collections import OrderedDict
@@ -143,7 +144,20 @@ def write_dicts_to_json(dicts, output_path):
         print(f"Failed to write JSON file: {e}")
 
 if __name__ == "__main__":
-    root_folder = os.getcwd()
+    # Use argparse to allow optional command-line path input
+    parser = argparse.ArgumentParser(description="Load YAML files and export them to JSON.")
+    parser.add_argument(
+        "path",
+        nargs="?",
+        default=os.getcwd(),
+        help="Path to the root folder containing YAML files (default: current working directory)."
+    )
+    args = parser.parse_args()
+
+    # Resolve the absolute path to the target folder
+    root_folder = os.path.abspath(args.path)
+
+    # Load all YAML metadata files from the specified folder
     all_metadata = load_yaml_files_recursively(root_folder)
 
     print(f"Loaded {len(all_metadata)} YAML files.")
