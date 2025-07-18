@@ -10,7 +10,7 @@ from collections import OrderedDict
 IGNORED_FILES = [
     "_quarto.yml",  # Ignores Quarto project configuration files
     "\\renv",  # Ignores renv environment paths
-    "_metadata.yml"  # Ignore a specific template file
+    "_metadata.yaml"  # Ignore a specific template file
 ]
 
 def ordered_yaml_loader():
