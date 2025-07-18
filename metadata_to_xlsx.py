@@ -6,9 +6,10 @@ from openpyxl import Workbook
 from openpyxl.styles import Font
 from collections import OrderedDict
 
-# List of file name patterns to ignore (partial match or full name)
+# List of file name or file path patterns to ignore (partial match or full name)
 IGNORED_FILES = [
-    "_quarto.yml"  # Ignores Quarto project configuration files
+    "_quarto.yml",  # Ignores Quarto project configuration files
+    "\\renv"  # Ignores renv environment paths
 ]
 
 def ordered_yaml_loader():
@@ -91,6 +92,10 @@ def load_yaml_files_recursively(root_path):
                     print(f"Skipping ignored file: {os.path.join(dirpath, filename)}")
                     continue
 
+                if any(pattern in dirpath for pattern in IGNORED_FILES):
+                    print(f"Skipping ignored filepath: {dirpath}")
+                    continue
+
                 full_path = os.path.join(dirpath, filename)
                 file_content = None
 
@@ -120,6 +125,7 @@ def load_yaml_files_recursively(root_path):
                     if isinstance(data, dict):
                         # Add relative path as string to each data set
                         rel_path = os.path.relpath(dirpath, root_path)
+                        print(rel_path)
                         data["filepath"] = rel_path.replace("\\", "/")  # Same format for Windows/Linux
                         yaml_dicts.append(data)
                 except yaml.YAMLError as e:

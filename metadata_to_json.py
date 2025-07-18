@@ -6,9 +6,10 @@ import json
 import datetime
 from collections import OrderedDict
 
-# List of file name patterns to ignore (partial match or full name)
+# List of file name or file path patterns to ignore (partial match or full name)
 IGNORED_FILES = [
-    "_quarto.yml"  # Ignores Quarto project configuration files
+    "_quarto.yml",  # Ignores Quarto project configuration files
+    "\\renv"  # Ignores renv environment paths
 ]
 
 def ordered_yaml_loader():
@@ -72,6 +73,10 @@ def load_yaml_files_recursively(root_path):
             if filename.endswith((".yaml", ".yml")):
                 if any(pattern in filename for pattern in IGNORED_FILES):
                     print(f"Skipping ignored file: {os.path.join(dirpath, filename)}")
+                    continue
+
+                if any(pattern in dirpath for pattern in IGNORED_FILES):
+                    print(f"Skipping ignored filepath: {dirpath}")
                     continue
 
                 full_path = os.path.join(dirpath, filename)
