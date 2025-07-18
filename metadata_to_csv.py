@@ -124,6 +124,9 @@ def load_yaml_files_recursively(root_path):
                 try:
                     data = yaml.load(file_content, Loader=loader)
                     if isinstance(data, dict):
+                        # Add relative path as string to each data set
+                        rel_path = os.path.relpath(dirpath, root_path)
+                        data["filepath"] = rel_path.replace("\\", "/")  # Same format for Windows/Linux
                         yaml_dicts.append(data)
                 except yaml.YAMLError as e:
                     print(f"Failed to parse YAML in {full_path}: {e}")
