@@ -9,7 +9,8 @@ from collections import OrderedDict
 # List of file name or file path patterns to ignore (partial match or full name)
 IGNORED_FILES = [
     "_quarto.yml",  # Ignores Quarto project configuration files
-    "\\renv"  # Ignores renv environment paths
+    "\\renv",  # Ignores renv environment paths
+    "_metadata.yml"  # Ignore a specific template file
 ]
 
 def ordered_yaml_loader():
