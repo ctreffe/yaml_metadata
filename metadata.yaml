@@ -45,6 +45,12 @@ aliases:
 
 study_type: online
 
+# Each metadata record should indicate whether the study was preregistered 
+# (True or False). For preregistered studies, a link to the preregistration 
+# should be included in the online resources.
+
+preregistered: True
+
 # To allow for a general classification of studies, provide the general
 # research area for which the data was collected. In addition, provide common
 # abbreviations for the research area where applicable. Examples are:
